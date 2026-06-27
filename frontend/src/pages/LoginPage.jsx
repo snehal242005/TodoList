@@ -41,7 +41,7 @@ export default function LoginPage() {
 
       setApiError(
         err.message === 'Network Error'
-          ? 'Cannot reach the server. Check that the backend is running on port 8080.'
+          ? 'Cannot reach the server. Check your internet connection or try again later.'
           : err.response?.status === 401
           ? 'Invalid email or password. Please try again.'
           : `Login failed (${err.response?.status ?? 'unknown error'}). Please try again.`

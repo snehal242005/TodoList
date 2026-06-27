@@ -22,7 +22,7 @@ export default function TodoPage() {
       if (err.response?.status === 401 || err.response?.status === 403) {
         handleLogout();
       } else {
-        setError('Could not connect to the server. Make sure the backend is running on port 8080.');
+        setError('Could not connect to the server. Check your internet connection or try again later.');
       }
     } finally {
       setLoading(false);

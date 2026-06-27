@@ -72,7 +72,7 @@ export default function RegisterPage() {
         data?.errors?.email ||
         data?.errors?.username ||
         (err.message === 'Network Error'
-          ? 'Cannot reach the server. Check that the backend is running on port 8080.'
+          ? 'Cannot reach the server. Check your internet connection or try again later.'
           : `Registration failed (${err.response?.status ?? 'unknown error'}). Please try again.`);
 
       setApiError(message);
